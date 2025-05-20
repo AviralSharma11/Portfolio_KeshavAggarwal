@@ -1,0 +1,58 @@
+.work {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.publication-box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always two columns */
+  gap: 20px;
+  padding: 2rem;
+}
+
+.publication-box {
+  background-color: #efeded;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.75rem;
+}
+
+.pub-authors,
+.pub-journal {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.pub-link {
+  margin-top: 1rem;
+  display: inline-block;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pub-link:hover {
+  color: #005999;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .publication-box-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
