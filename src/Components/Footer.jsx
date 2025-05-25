@@ -2,7 +2,6 @@ import React from 'react';
 import '../Styles/Footer.css';
 import { FaResearchgate, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiGooglescholar, SiOrcid } from 'react-icons/si';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -13,7 +12,6 @@ const Footer = () => {
           <li>Club Head – AsSET (Astronomy, Space Engineering & Tech), IIT Indore</li>
           <li>Experience in event management</li>
           <li>Volunteer – NGO Be Happier Soul</li>
-          <li> <Link to="/food&travel" className="food-travel" style={{color: '#111'}}>Food & Travel</Link></li>
         </ul>
       </div>
 

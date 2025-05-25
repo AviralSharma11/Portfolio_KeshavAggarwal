@@ -32,6 +32,7 @@ export default function Home() {
       <div className="nav-buttons">
         <button onClick={() => navigate('/publications')}>My Publications</button>
         <button onClick={() => navigate('/education')}>Education and Work Experience</button>
+        <button onClick={() => navigate('/food&travel')}>Food & Travel</button>
       </div>
 
       <Footer />
