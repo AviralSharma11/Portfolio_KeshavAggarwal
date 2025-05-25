@@ -41,7 +41,7 @@ const Header = () => {
           <li><a href="/" className="active">Home</a></li>
           <li><a href="/#About">About</a></li>
           <li><a href="/assets/Final_CV.pdf" target="_blank" rel="noopener noreferrer">MY&nbsp;CV</a></li>
-          <li><a href="/#works">Works</a></li>
+          <li><a href="publications/#works">Works</a></li>
           <li><a href="https://jovian-explorer.medium.com/">Blog</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>

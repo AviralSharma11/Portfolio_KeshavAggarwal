@@ -90,7 +90,8 @@
 
   .footer-section {
     width: 100%;
-    margin-bottom: 2rem;
+    margin:0px;
+    flex:none;
   }
 
   .social-links {

@@ -3,6 +3,8 @@ import Home from './Home';
 import AllPublications from './AllPublications';
 import Collage from './Collage';
 import ScrollToTop from './ScrollToTop';
+import Publications from './Publications';
+import Education from './Education';
 
 
 
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/all-publications" element={<AllPublications />} />
         <Route path='/food&travel' element={<Collage />} />
+        <Route path='/publications' element={<Publications/>} />
+        <Route path='/education' element={<Education/>} />
       </Routes>
     </Router>
     </div>

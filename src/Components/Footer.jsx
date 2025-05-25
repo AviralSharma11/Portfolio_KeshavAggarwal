@@ -8,23 +8,6 @@ const Footer = () => {
   return (
     <footer className="profile-footer" >
       <div className="footer-section">
-        <h4>Education</h4>
-        <ul>
-          <li>Ph.D. in Astronomy, IIT Indore (Pursuing)</li>
-          <li>M.Sc. in Astronomy, IIT Indore, 2023</li>
-          <li>B.Sc. in PCM, CCS University Meerut, 2021</li>
-        </ul>
-      </div>
-
-      <div className="footer-section">
-        <h4>Work Experience</h4>
-        <ul>
-          <li><strong>Feb 2022 – Aug 2022:</strong> Data Analyst & Management Intern, Armstrong Space Australia<br /><em>Project Head:</em> Abin Sharaf</li>
-          <li><strong>Aug 2022 – Feb 2023:</strong> Researcher (AI/ML & Orbital Mechanics), ERETS Space London<br /><em>Project Head:</em> Dr. Abhiram Jayan Nair</li>
-        </ul>
-      </div>
-
-      <div className="footer-section">
         <h4>Extra Activities</h4>
         <ul>
           <li>Club Head – AsSET (Astronomy, Space Engineering & Tech), IIT Indore</li>

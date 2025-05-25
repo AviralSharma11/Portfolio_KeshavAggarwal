@@ -1,38 +1,40 @@
-import React , {useEffect} from "react";
-import { useLocation } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 import Header from "./Components/Header";
 import Heroes from './Components/Heroes';
 import AboutSection from "./Components/AboutSection";
-import OtherPublicationGrid from "./Components/OtherPublicationGrid";
-import PublicationBoxes from "./Components/PublicationBoxes";
-import OpenSourceCode from "./Components/OpenSourceCode";
 import Footer from "./Components/Footer";
+import "./Home.css";
 
-
-export default function Home(){
-    const location = useLocation();
+export default function Home() {
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace('#', '');
       const element = document.getElementById(id);
       if (element) {
-        // Wait a tick if needed
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' });
         }, 100);
       }
     }
   }, [location]);
-    return(
-        <div className="home">
-                <Header />
-                <Heroes />
-                <AboutSection />
-                <PublicationBoxes />
-                <OtherPublicationGrid />
-                <OpenSourceCode />
-                <Footer />
+
+  return (
+    <div className="home">
+      <Header />
+      <Heroes />
+      <AboutSection />
+
+      {/* Navigation Buttons */}
+      <div className="nav-buttons">
+        <button onClick={() => navigate('/publications')}>My Publications</button>
+        <button onClick={() => navigate('/education')}>Education and Work Experience</button>
       </div>
-    );
+
+      <Footer />
+    </div>
+  );
 }
