@@ -1,23 +1,23 @@
-import AboutSection from "./Components/AboutSection";
-import Header from "./Components/Header";
-import Heroes from "./Components/Heroes";
-import PublicationBoxes from "./Components/PublicationBoxes";
-import OpenSourceCode from "./Components/OpenSourceCode";
-import Footer from "./Components/Footer";
-import OtherPublicationGrid from "./Components/OtherPublicationGrid";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import AllPublications from './AllPublications';
+import Collage from './Collage';
+import ScrollToTop from './ScrollToTop';
+
 
 
 
 function App() {
   return (
     <div>
-      <Header />
-      <Heroes />
-      <AboutSection />
-      <PublicationBoxes />
-      <OtherPublicationGrid />
-      <OpenSourceCode />
-      <Footer />
+      <Router>
+        <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/all-publications" element={<AllPublications />} />
+        <Route path='/food&travel' element={<Collage />} />
+      </Routes>
+    </Router>
     </div>
     
   );

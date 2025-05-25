@@ -1,5 +1,7 @@
 import React ,{useState} from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/OtherPublicationGrid.css';
+
 
 const publications = [
   {
@@ -83,7 +85,7 @@ const OtherPublicationGrid = () => {
 
   const toggleShow = () => setShowAll((prev) => !prev);
 
-  const visiblePublications = showAll ? publications : publications.slice(0, 6); // 2 rows * 3 cols
+  const visiblePublications = showAll ? publications : publications.slice(0, 3); // 2 rows * 3 cols
 
   return (
     <div className="publications-container">
@@ -106,9 +108,15 @@ const OtherPublicationGrid = () => {
         ))}
       </div>
       <div className="show-more-container">
-        <button className="show-more-button" onClick={toggleShow}>
-          {showAll ? 'Show Less' : 'Show More'}
-        </button>
+        {showAll ? (
+          <button className="show-more-button" onClick={toggleShow}>
+            Show Less
+          </button>
+        ) : (
+          <Link to="/all-publications" className="show-more-button">
+            Show More
+          </Link>
+        )}
       </div>
     </div>
   );

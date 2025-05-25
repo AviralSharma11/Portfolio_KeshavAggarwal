@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <header className={`header ${showHeader ? 'show' : 'hide'}`}>
-      <div className="logo">PROTOFILO.</div>
+      <div className="logo">PORTFOLIO.</div>
 
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
@@ -38,12 +38,12 @@ const Header = () => {
 
       <nav className={`nav ${menuOpen ? 'active' : ''}`}>
         <ul>
-          <li><a href="#heroes" className="active">Home</a></li>
-          <li><a href="#About">About</a></li>
+          <li><a href="/" className="active">Home</a></li>
+          <li><a href="/#About">About</a></li>
           <li><a href="/assets/Final_CV.pdf" target="_blank" rel="noopener noreferrer">MY&nbsp;CV</a></li>
-          <li><a href="#works">Works</a></li>
+          <li><a href="/#works">Works</a></li>
           <li><a href="https://jovian-explorer.medium.com/">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
