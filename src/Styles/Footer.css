@@ -9,6 +9,7 @@
   color: #222;
   line-height: 1.6;
   font-size: 0.8rem;
+  margin-top:104px ;
 }
 
 .footer-section {
@@ -79,6 +80,14 @@
 .social-links a:hover {
   color: #0056b3;
 }
+
+@media (min-width: 910px) and (max-width: 1192px) {
+  .footer-section {
+    flex: 0 0 48%;
+    margin: 1%;
+  }
+}
+
 
 
 @media (max-width: 768px) {

@@ -1,0 +1,45 @@
+.outreach-container {
+  margin-top: 104px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+
+.outreach-section {
+  width: 90%;
+  height: 60vh;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+.outreach-section:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .outreach-section {
+    width: 95%;
+    height: 40vh;
+  }
+}

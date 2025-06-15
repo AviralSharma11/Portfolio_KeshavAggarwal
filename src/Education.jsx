@@ -1,7 +1,6 @@
 import React from "react";
 import "./Styles/Education.css";
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 
 export default function Education() {
   return (
@@ -36,6 +35,6 @@ export default function Education() {
         </ul>
       </div>
     </section>
-    <Footer /> </>
+    </>
   );
 }

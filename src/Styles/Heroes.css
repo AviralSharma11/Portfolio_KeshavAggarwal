@@ -1,9 +1,20 @@
+:root {
+  --color-bg-dark: #1a1a1a;
+  --color-text-light: #aaa;
+  --color-highlight: #d1d17b;
+  --color-white: #fff;
+  --color-text-dark: #2b2b2b;
+  --color-dot: #888;
+  --color-dot-bg: #444;
+}
+
 .hero {
-  margin-top: 65px;
+  margin-top: 4rem; /* ~65px */
+  padding-top: 2rem;
   display: flex;
   height: 80vh;
-  background-color: #1a1a1a;
-  color: white;
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
   font-family: 'Arial', sans-serif;
 }
 
@@ -12,32 +23,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px;
-  background-color: #1a1a1a;
+  padding: 3.75rem; /* 60px */
+  background-color: var(--color-bg-dark);
 }
 
 .hero-text p {
-  font-size: 24px;
-  color: #aaa;
-  margin: 0 0 10px 0;
+  font-size: 1.5rem; /* 24px */
+  color: var(--color-text-light);
+  margin: 0 0 0.625rem 0; /* 10px */
 }
 
 .hero-text h1 {
-  font-size: 48px;
-  color: #d1d17b;
-  margin: 0 0 20px 0;
+  font-size: 3rem; /* 48px */
+  color: var(--color-highlight);
+  margin: 0 0 1.25rem 0; /* 20px */
 }
 
 .hero-text button {
-  background-color: #d1d17b;
+  background-color: var(--color-highlight);
   border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 0.75rem 1.25rem; /* 12px 20px */
+  font-size: 1rem; /* 16px */
+  font-weight: 700;
   color: black;
-  cursor: pointer;
   width: fit-content;
+  border-radius: 4px;
 }
+
+
 
 .hero-image {
   flex: 1;
@@ -45,6 +58,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
 .hero-image img {
@@ -52,6 +66,72 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.hero-image img:hover {
+  filter: grayscale(0%);
+}
+
+.about-text {
+  margin-top: 1.25rem; /* 20px */
+  max-width: 37.5rem; /* 600px */
+  color: var(--color-text-dark);
+}
+
+.title {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+}
+
+.title .dot {
+  color: var(--color-highlight);
+  font-size: 2.25rem;
+}
+
+.zigzag {
+  margin: 0.75rem 0 1.25rem; /* 12px 0 20px */
+  width: 6.25rem; /* 100px */
+  height: 0.625rem; /* 10px */
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 0.3125rem, /* 5px */
+    var(--color-dot) 0.3125rem,
+    var(--color-dot) 0.625rem
+  );
+}
+
+.about-text p {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.6;
+  margin-bottom: 1.125rem; /* 18px */
+  color: var(--color-white);
+}
+
+.dots {
+  position: absolute;
+  bottom: -1.25rem; /* -20px */
+  left: 0.625rem; /* 10px */
+  width: 6.25rem; /* 100px */
+  height: 2.5rem; /* 40px */
+  background-image: radial-gradient(var(--color-dot-bg) 1px, transparent 1px);
+  background-size: 0.625rem 0.625rem; /* 10px 10px */
+  opacity: 0.4;
+}
+
+.hilight {
+  text-decoration: none;
+  background-color: var(--color-highlight);
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 0.25rem 0.4rem; /* 4px padding */
+  border-radius: 3px;
 }
 
 /* ======================= */
@@ -61,34 +141,36 @@
   .hero {
     flex-direction: column;
     height: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .hero-text {
-    padding: 30px 20px;
+    padding: 2rem 1rem; /* reduce horizontal padding */
     text-align: center;
-  }
-
-  .hero-text p {
-    font-size: 18px;
-  }
-
-  .hero-text h1 {
-    font-size: 32px;
   }
 
   .hero-text button {
     margin: 0 auto;
-    font-size: 14px;
-    padding: 10px 18px;
+    font-size: 0.875rem;
+    padding: 0.625rem 1.125rem;
   }
 
   .hero-image {
-    min-height: 300px;
+    min-height: 18.75rem;
+    width: 100%;
+    padding: 0 0.5rem; /* small horizontal padding */
   }
 
   .hero-image img {
-    height: 100%;
-    max-height: 300px;
-    width: auto;
+    max-width: 100%;
+    height: auto; /* maintain aspect ratio, avoid forcing height */
+    max-height: 18.75rem;
+  }
+
+  .dots {
+    left: 0.5rem; /* reduce from 10px = 0.625rem to 0.5rem */
+    width: 5rem; /* reduce width to avoid overflow */
+    /* or alternatively use max-width: 100% */
   }
 }

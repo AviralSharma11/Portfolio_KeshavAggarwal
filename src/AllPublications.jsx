@@ -2,7 +2,7 @@
 import React from 'react';
 import './Styles/OtherPublicationGrid.css';
 import Header from './Components/Header';
-import Footer from './Components/Footer';
+
 
 const publications = [
   {
@@ -105,7 +105,6 @@ const AllPublications = () => {
         ))}
       </div>
     </div>
-    <Footer />
     </>
   );
 };
