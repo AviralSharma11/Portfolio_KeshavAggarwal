@@ -2,11 +2,12 @@
   max-width: 800px;
   margin: 100px auto;
   padding: 20px;
-  background: #fdfdfd;
+  background: linear-gradient(135deg, white, var(--neutral-50));
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
+  color: var(--neutral-700);
+  border: 1px solid var(--neutral-200);
 }
 
 .section {
@@ -16,9 +17,10 @@
 .section h2 {
   margin-bottom: 15px;
   font-size: 28px;
-  color: #2c3e50;
-  border-bottom: 2px solid #e0e0e0;
+  color: var(--neutral-800);
+  border-bottom: 2px solid var(--primary-500);
   padding-bottom: 5px;
+  font-weight: 600;
 }
 
 .section ul {
@@ -29,10 +31,11 @@
 .section li {
   margin-bottom: 12px;
   line-height: 1.6;
+  color: var(--neutral-700);
 }
 
 .edu-year {
-  color: #666;
+  color: var(--neutral-500);
   font-style: italic;
   margin-left: 5px;
 }

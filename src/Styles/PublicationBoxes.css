@@ -1,6 +1,9 @@
 .work {
   text-align: center;
   margin-top: 40px;
+  color: var(--neutral-800);
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .publication-box-container {
@@ -8,51 +11,66 @@
   grid-template-columns: repeat(2, 1fr); /* Always two columns */
   gap: 20px;
   padding: 2rem;
+  background: var(--neutral-50);
 }
 
 .publication-box {
-  background-color: #efeded;
+  background: linear-gradient(135deg, white, var(--neutral-50));
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--neutral-200);
 }
 
 .publication-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-300);
 }
 
 .pub-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #222;
+  color: var(--neutral-800);
   margin-bottom: 0.75rem;
+  line-height: 1.4;
 }
 
 .pub-authors,
 .pub-journal {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
-  color: #444;
+  color: var(--neutral-600);
+  line-height: 1.5;
 }
 
 .pub-link {
   margin-top: 1rem;
   display: inline-block;
-  color: #0077cc;
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
 }
 
 .pub-link:hover {
-  color: #005999;
-  text-decoration: underline;
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
 }
 
 @media (max-width: 600px) {
     .publication-box-container{
         display: flex;
         flex-direction: column;
+    }
+    
+    .work {
+        font-size: 2rem;
     }
 }
