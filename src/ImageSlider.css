@@ -5,7 +5,6 @@ body {
 
 .slider-wrapper {
   display: flex;
-  margin-top: 150px;
   flex-direction: column;
   align-items: center;
   justify-content: center;

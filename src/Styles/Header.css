@@ -42,7 +42,7 @@
     padding: 0;
     right: 350px;
     width: 100px;
-    background-color: transparent;
+    background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
 }
 
 .nav ul li a {

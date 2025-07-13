@@ -113,7 +113,7 @@ const OtherPublicationGrid = () => {
             Show Less
           </button>
         ) : (
-          <Link to="/all-publications" className="show-more-button">
+          <Link to="/publications/other-publications" className="show-more-button">
             Show More
           </Link>
         )}
