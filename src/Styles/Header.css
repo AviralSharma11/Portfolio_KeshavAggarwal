@@ -3,13 +3,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
-  background-color: #1a1a1a;
+  background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
   color: white;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
   transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--neutral-700);
 }
 
 .header.hide {
@@ -23,7 +25,8 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #d1d17b;
+  color: var(--secondary-400);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
@@ -39,7 +42,7 @@
     padding: 0;
     right: 350px;
     width: 100px;
-    background-color: #1a1a1a;
+    background-color: transparent;
 }
 
 .nav ul li a {
@@ -47,10 +50,15 @@
   text-decoration: none;
   width: 40px;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav ul li a.active {
-  color: #d1d17b;
+  color: var(--secondary-400);
+}
+
+.nav ul li a:hover {
+  color: var(--primary-300);
 }
 
 .hamburger {
@@ -95,12 +103,13 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, var(--neutral-900), var(--neutral-800));
     transform: translateY(-200%);
     opacity: 0;
     pointer-events: none;
     transition: transform 0.3s ease, opacity 0.3s ease;
     right: 60px;
+    border-bottom: 1px solid var(--neutral-700);
   }
 
   .nav.active {

@@ -1,7 +1,6 @@
 import React , {useEffect} from "react";
 import { useLocation } from 'react-router-dom';
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import PublicationBoxes from "./Components/PublicationBoxes";
 import OtherPublicationGrid from "./Components/OtherPublicationGrid";
 import OpenSourceCode from "./Components/OpenSourceCode";
@@ -28,7 +27,6 @@ export default function Publications(){
             <PublicationBoxes />
             <OtherPublicationGrid />
             <OpenSourceCode />    
-            <Footer />
             </div>
         </>
     );
