@@ -11,28 +11,40 @@
   grid-template-columns: repeat(2, 1fr); /* Always two columns */
   gap: 20px;
   padding: 2rem;
-  background: var(--neutral-50);
+  background: linear-gradient(135deg, var(--neutral-100), var(--neutral-200));
 }
 
 .publication-box {
-  background: linear-gradient(135deg, white, var(--neutral-50));
+  background: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--neutral-700);
+  position: relative;
+  overflow: hidden;
+}
+
+.publication-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-500), var(--accent-500));
 }
 
 .publication-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  border-color: var(--primary-300);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary-500);
 }
 
 .pub-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--neutral-800);
+  color: var(--neutral-100);
   margin-bottom: 0.75rem;
   line-height: 1.4;
 }
@@ -41,7 +53,7 @@
 .pub-journal {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
-  color: var(--neutral-600);
+  color: var(--neutral-300);
   line-height: 1.5;
 }
 
@@ -55,13 +67,13 @@
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
 }
 
 .pub-link:hover {
-  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+  background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
 }
 
 @media (max-width: 600px) {

@@ -5,7 +5,7 @@
   align-items: center;
   gap: 30px;
   padding: 40px 20px;
-  background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+  background: linear-gradient(135deg, var(--neutral-100), var(--neutral-200));
   min-height: 100vh;
 }
 
@@ -26,7 +26,7 @@
 .outreach-section:hover {
   transform: scale(1.02) translateY(-8px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-  border-color: var(--primary-400);
+  border-color: var(--accent-400);
 }
 
 .overlay {
@@ -44,7 +44,7 @@
 }
 
 .outreach-section:hover .overlay {
-  background: linear-gradient(to top, var(--primary-600), rgba(14, 165, 233, 0.3));
+  background: linear-gradient(to top, var(--accent-600), rgba(20, 184, 166, 0.3));
 }
 
 @media (max-width: 768px) {

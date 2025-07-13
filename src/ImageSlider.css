@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
-  background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+  background: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
   min-height: 100vh;
 }
 
@@ -23,20 +23,23 @@ body {
   align-items: center;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  background: var(--neutral-900);
+  border: 2px solid var(--neutral-700);
 }
 
 .slider-image {
   height: 480px;
   width: 100%;
   object-fit: cover;
+  filter: brightness(1.1) contrast(1.05);
 }
 
 .nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
   border: none;
   color: white;
   padding: 10px 14px;
@@ -45,13 +48,14 @@ body {
   border-radius: 50%;
   z-index: 1;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .nav-button:hover {
-  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.6);
 }
 
 .prev {
@@ -73,20 +77,23 @@ body {
   height: 10px;
   width: 10px;
   margin: 4px;
-  background-color: var(--neutral-400);
+  background-color: var(--neutral-500);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: 2px solid var(--neutral-600);
 }
 
 .dot.active {
   background-color: var(--primary-500);
   transform: scale(1.2);
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.6);
+  border-color: var(--primary-400);
 }
 
 .dot:hover {
   background-color: var(--primary-400);
   transform: scale(1.1);
+  border-color: var(--primary-300);
 }
